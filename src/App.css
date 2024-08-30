@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+  padding: 20px;
+}
+.name_box{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ margin-bottom: 10px;
+ gap: 15px;
+}
+.name_box label{
+  font-size: large;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 80%;
+  max-width: 300px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.Start_btn{
+  background-color: #08bc08;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100px;
+  color: white;
+  cursor: pointer;
+  transition: ease-in 0.3s;
+}
+.Start_btn:hover{
+  background-color:#079d07 ;
+}
