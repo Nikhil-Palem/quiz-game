@@ -10,10 +10,11 @@ function App() {
   const [quizOver, setQuizOver] = useState(false);
   const [loading, setloading] = useState(true);
   const [StartQuiz, setStartQuiz] = useState(false);
+  const BackendUrl="https://vercel.com/nikhils-projects-4641f0d8/quiz-backend";
 
   useEffect(() => {
     const fetchQuestions = async () => {
-      const response = await axios.get('http://localhost:5000/api/quiz');
+      const response = await axios.get(`${BackendUrl}/api/quiz`);
       setQuestions(response.data);
       setloading(false);
       console.log(response.data);
@@ -25,7 +26,7 @@ function App() {
 
   const handleQuizEnd = async () => {
     setQuizOver(true);
-    const response=await axios.post('http://localhost:5000/api/scores', { username, score });
+    const response=await axios.post(`${BackendUrl}/api/scores`, { username, score });
     console.log(response.data.username);
     setUsername(response.data.username);
     setScore(response.data.score);

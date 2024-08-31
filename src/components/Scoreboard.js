@@ -4,10 +4,12 @@ import './Scoreboard.css';
 
 function Scoreboard({ username, score }) {
   const [scores, setScores] = useState([]);
+  const BackendUrl="https://vercel.com/nikhils-projects-4641f0d8/quiz-backend";
+
   console.log(username, score)
   useEffect(() => {
     const fetchScores = async () => {
-      const response = await axios.get('http://localhost:5000/api/scores');
+      const response = await axios.get(`${BackendUrl}/api/scores`);
       setScores(response.data);
     };
     fetchScores();
