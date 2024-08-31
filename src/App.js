@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     const fetchQuestions = async () => {
       const response = await axios.get(`${BackendUrl}/api/quiz`);
-      setQuestions(response.data.results);
+      setQuestions(response.data);
       setloading(false);
       console.log(response.data.results,"data");
       console.log(response.data)
