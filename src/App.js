@@ -17,7 +17,8 @@ function App() {
       const response = await axios.get(`${BackendUrl}/api/quiz`);
       setQuestions(response.data.results);
       setloading(false);
-      console.log(response.data.results);
+      console.log(response.data.results,"data");
+      console.log(response.data)
     };
     fetchQuestions();
   }, []);
