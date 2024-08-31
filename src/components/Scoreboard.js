@@ -4,7 +4,7 @@ import './Scoreboard.css';
 
 function Scoreboard({ username, score }) {
   const [scores, setScores] = useState([]);
-  const BackendUrl="https://vercel.com/nikhils-projects-4641f0d8/quiz-backend";
+  const BackendUrl="https://quiz-backend-gray.vercel.app";
 
   console.log(username, score)
   useEffect(() => {

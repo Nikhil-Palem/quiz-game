@@ -10,7 +10,7 @@ function App() {
   const [quizOver, setQuizOver] = useState(false);
   const [loading, setloading] = useState(true);
   const [StartQuiz, setStartQuiz] = useState(false);
-  const BackendUrl="https://vercel.com/nikhils-projects-4641f0d8/quiz-backend";
+  const BackendUrl="https://quiz-backend-gray.vercel.app";
 
   useEffect(() => {
     const fetchQuestions = async () => {
