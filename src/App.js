@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     const fetchQuestions = async () => {
-      const response = await axios.get(`${BackendUrl}/api/quiz`);
+      const response = await axios.get('https://opentdb.com/api.php?amount=10');
       setQuestions(response.data);
       setloading(false);
       console.log(response.data);
